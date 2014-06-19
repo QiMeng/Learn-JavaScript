@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+	<script >
+	document.write("js 直接写入html输出流中 ");
+	</script >
+
+	<button  type="button" onclick="alert('Hello World')">
+		touch me
+	</button>
+
+
+	<p id="dome">
+		js 改变html 的内容
+	</p>
+	
+	<script>
+	
+		function myFunction() {
+			x = document.getElementById("dome");
+			x.innerHTML = "Hello js";
+			
+		}
+
+	</script>
+	
+	<button type="button" onclick="myFunction()">
+		touch me change html
+	</button>
+
+
+</html>
