@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<script>
+
+
+function myfunction() {
+
+	try{
+	
+		var x = document.getElementById("dome").value;
+		
+		if(x== "") throw "空值";
+		if(isNaN(x)) throw "不是数字";
+		if(x >10) throw "大于10";
+		if(x <5) throw "小于5";
+		
+		var y = document.getElementById("mess");
+		y.innerHTML = "输入的值是:" + x;
+	
+	}catch(err) {
+		
+		var y = document.getElementById("mess");
+		y.innerHTML = "错误" + err;
+	}
+	
+}
+
+</script>
+
+
+<h1> JS程序 </h1>
+
+<p> 请输入5到10之间的数字: </p>
+
+<br />
+
+<input id="dome" type="text">
+
+<button type="button" onclick="myfunction()"> 测试输入值 </button>
+
+<p id="mess"> </p> 
+
+</body>
+
+</html>
